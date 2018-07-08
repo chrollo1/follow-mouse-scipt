@@ -15,7 +15,8 @@ dx = void 0,
 dy = void 0,
 tx = 0,
 ty = 0,
-key = -1;
+key = -1
+speed = 0.25;
 
 var followMouse = function followMouse() {
   key = requestAnimationFrame(followMouse);
@@ -24,8 +25,8 @@ var followMouse = function followMouse() {
     x = mouseX;
     y = mouseY;
   } else {
-    dx = (mouseX - x) * 0.25;
-    dy = (mouseY - y) * 0.25;
+    dx = (mouseX - x) * speed;
+    dy = (mouseY - y) * speed;
 
     if (Math.abs(dx) + Math.abs(dy) < 0.1){
       x = mouseX;
